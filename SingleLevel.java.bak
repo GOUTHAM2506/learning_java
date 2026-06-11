@@ -1,0 +1,20 @@
+class Father { //Parent Class
+	double money = 1000;
+	String scooty = "Activa";
+}
+
+class Son extends Father { //Child Class with inheritance of Parent Class
+	String phone = "Samsung";
+	boolean hasGf = true;
+}
+
+class SingleLevel {
+	public static void main(String[] args) 
+	{
+		Son s1 = new Son();
+		System.out.println(s1.phone);
+		System.out.println(s1.hasGf);
+		System.out.println(s1.money);
+		System.out.println(s1.scooty);
+	}
+}

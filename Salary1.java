@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class Salary1
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter Salary : ");
+		long a = sc.nextLong();
+		int b = (int)a;
+		System.out.println("Salary of long is converted into int:\n"+b);
+	}
+}

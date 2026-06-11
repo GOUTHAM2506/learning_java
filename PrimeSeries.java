@@ -1,0 +1,28 @@
+//Prime Number Series
+import java.util.Scanner;
+class PrimeSeries
+{
+	static Scanner sc = new Scanner(System.in);
+	public static Boolean prime(int p)
+	{
+		int count = 0;
+		for(int i=1;i<=p;i++)
+		{
+			if(p%i==0) count++;
+		}
+		if(count==2) return true;
+		else return false;
+	}
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a starting range : ");
+		int a = sc.nextInt();
+		System.out.print("Enter a ending range : ");
+		int b = sc.nextInt();
+		for(int i=a;i<=b;i++)
+		{
+			Boolean o = prime(i);
+			if(o) System.out.print(i+" ");
+		}
+	}
+}

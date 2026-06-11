@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class XylemNumber
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a number : ");
+		int n = sc.nextInt();
+		int temp = n;
+		int lastDigit = n%10;
+		n /= 10;
+		int sum = 0;
+		while(n>9)
+		{
+			int ld = n % 10;
+			sum += ld;
+			n /= 10;
+		}
+		if (n+lastDigit == sum)	System.out.println(temp+" is a Xylem Number");
+		else	System.out.println(temp+" is not a Xylem Number");
+	}
+}

@@ -1,0 +1,40 @@
+//Armstrong Number
+import java.util.Scanner;
+class Armstrong
+{
+	static Scanner sc = new Scanner(System.in);
+	public static int count(int n)
+	{
+		int count=0;
+		while(n>0)
+		{
+			count++;
+			n/=10;
+		}
+		return count;
+	}
+	
+	public static int power(int ld, int c)
+	{
+		int mul = 1;
+		for(int i=1;i<=c;i++)	mul*=ld;
+		return mul;
+	}
+
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a number : ");
+		int n = sc.nextInt();
+		int c = count(n);
+		int temp = n;
+		int sum = 0;
+		while(n>0)
+		{
+			int ld = n%10;
+			sum+=power(ld,c);
+			n/=10;
+		}
+		if(sum==temp) System.out.println("An Armstrong Number");
+		else System.out.println("Not An Armstrong Number");
+	}
+}

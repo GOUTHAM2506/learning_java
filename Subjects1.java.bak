@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Subjects1
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter English Mark : ");
+		int e = sc.nextInt();
+		System.out.print("Enter Thamizh Mark : ");
+		int t = sc.nextInt();
+		System.out.print("Enter Maths Mark : ");
+		int m = sc.nextInt();
+		System.out.print("Enter Science Mark : ");
+		int s = sc.nextInt();
+		System.out.print("Enter Social Science");
+		int ss = sc.nextInt();
+		System.out.print("Total : "+(e+t+m+s+ss)+"\nAverage : "+((e+t+m+s+ss)/5));
+	}
+}

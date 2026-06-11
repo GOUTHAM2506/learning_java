@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Student2
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter English Mark : ");
+		int e = sc.nextInt();
+		System.out.print("Enter Thamizh Mark : ");
+		int t = sc.nextInt();
+		System.out.print("Enter German Mark : ");
+		int g = sc.nextInt();
+		System.out.print("Total : "+(e+t+g)+"\nPercentage : "+(float)((e+t+g)*100)/300);
+	}
+}

@@ -1,0 +1,57 @@
+//With do while loop
+import java.util.Scanner;
+class Calculator2
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.println("\t\tCalculator\n+ - Addition\n- - Subtraction\n* - Multiplication\n/ - Division\nC - Clear\n= - End Of The Operations");
+		System.out.println("Operations (+,-,*,/,C,=(End the function)) ");
+		char opt;
+		int n1=0;
+		int n2;
+		int i = 1;
+		do
+		{
+			if (n1==0)
+			{
+				System.out.print("Num"+i+" : ");
+				n1 = sc.nextInt();
+				i++;
+			}
+			System.out.print("Opt : ");
+			opt = sc.next().charAt(0);
+			switch(opt)
+			{
+				case '+':	System.out.print("Num"+i+" : ");
+							n2 = sc.nextInt();
+							i++;
+							n1+=n2;
+							break;
+				case '-':	System.out.print("Num"+i+" : ");
+							n2 = sc.nextInt();
+							i++;
+							n1-=n2;
+							break;
+				case '*':	System.out.print("Num"+i+" : ");
+							n2 = sc.nextInt();
+							i++;
+							n1*=n2;
+							break;
+				case '/':	System.out.print("Num"+i+" : ");
+							n2 = sc.nextInt();
+							i++;
+							n1/=n2;
+							break;
+				case 'C':	System.out.print("Cleared");
+							n1=0;
+							i=1;
+							break;
+				case '=':	System.out.println("End of calculation.");
+							break;
+				default : System.out.println("Enter a valid option");
+			}
+			System.out.println(n1);
+		}while (opt!='=');
+	}
+}

@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class Temperature1 
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter temperature : ");
+		double a = sc.nextDouble();
+		float b = (float)a;
+		int c = (int)b;
+		System.out.println("Temperature of double converted to float "+b+"\nAnd into int "+c);
+	}
+}

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Fiboncci 
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args)
+	{
+		int n1 = 0;
+		int n2 = 1;
+		System.out.print("Enter range : ");
+		int a = sc.nextInt();
+		if (a==1)
+		{
+			System.out.println(n1);
+		}
+		else if (a==2)
+		{
+			System.out.println(n1+" "+n2);
+		}
+		else
+		{
+			System.out.print(n1+" "+n2+" ");
+			for (int i=3;i<=a;i++)
+			{
+				int t = n1+n2;
+				n1 = n2;
+				n2 = t;
+				System.out.print(t+" ");
+			}
+		}
+	}
+}

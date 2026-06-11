@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Pattern2
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a range : ");
+		int a = sc.nextInt();
+		for(int i=1;i<=(a*a);i++)
+		{
+			if(i<=a || i>=((a*a)-(a-1)) || i%a==0 || (i-1)%a==0)
+			{
+				System.out.print("* ");
+			}
+			else
+			{
+				System.out.print("  ");
+			}
+			if(i%a==0)
+			{
+				System.out.println();
+			}
+		}
+	}
+}

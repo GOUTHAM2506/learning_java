@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class LeapYear 
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a year: ");
+		int y = sc.nextInt();
+		String ans = y%100==0 ? "Century Year and "+(y%400==0 ? "Leap Year" : "Not a Leap Year") : "Normal Year and "+(y%4==0 ? "Leap Year" : "Not a Leap Year");
+		System.out.println(ans);
+	}
+}

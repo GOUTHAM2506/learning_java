@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class NumberPattern7
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws Exception
+	{
+		System.out.print("Enter a range : ");
+		int n = sc.nextInt();
+		int k = 1;
+		for (int i=0;i<n;i++)
+		{
+			for (int j=0;j<n;j++)
+			{
+				if(i>=j)	System.out.print(k++ +" ");
+				else	System.out.print("  ");
+				//Thread.sleep(25);
+			}
+			System.out.println();
+		}
+	}
+}

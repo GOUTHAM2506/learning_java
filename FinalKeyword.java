@@ -1,0 +1,12 @@
+class FinalKeyword 
+{
+	final int A;
+	{
+		A = 21;
+	}
+	public static void main(String[] args) 
+	{
+		FinalKeyword ob = new FinalKeyword();
+		System.out.println(ob.A);
+	}
+}

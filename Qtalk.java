@@ -1,0 +1,102 @@
+import java.util.Scanner;
+class Qtalk { //Overloading
+	static Scanner sc = new Scanner(System.in);
+	String username;
+	String email;
+	long ph;
+	int pass;
+	
+	static {
+		System.out.println("\tWelcome to Qtalk");
+	}
+	
+	Qtalk(String username, String email, long ph, int pass) {
+		this.username = username;
+		this.email = email;
+		this.ph = ph;
+		this.pass = pass;
+	}
+	
+	void userDetails() {
+		System.out.println("Username : "+ username);
+		System.out.println("Email : "+ email);
+		System.out.println("Phone Number : "+ ph);
+		System.out.println("Password : "+ pass);
+	}
+	
+	void login(long ph, int pass) {
+		if(this.ph == ph && this.pass == pass) {
+			int genOTP = (int)(Math.random()*9000)+1000;
+			System.out.println("OTP generated to this number : "+ genOTP);
+			System.out.println("-----------------------");
+			System.out.print("Enter your OTP : ");
+			int otp = sc.nextInt();
+			if(genOTP == otp){
+				System.out.println("Login Successfull\nWelcome "+this.username);
+				System.out.println("-----------------------");
+			}
+		}
+		else {
+			System.out.println("Enter a valid credentials");
+		}
+	}
+	
+	void login(String email, int pass) {
+		if(this.email.equals(email) && this.pass == pass) {
+			System.out.println("Login Successfull");
+		}
+		else {
+			System.out.println("Enter a valid credentials");
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		/*Qtalk ob = new Qtalk("Goutham", "goutham25625@gmail.com", 12345);
+		ob.userDetails();*/
+		Qtalk user = null;
+		int n;
+		String loginEmail;
+		long loginPh;
+		int loginPass;
+		do {
+			System.out.print("1 - Signup \n2 - Login by Phone\n3 - Login by Email\n0 - Exit\nEnter your option : ");
+			n = sc.nextInt();
+			switch (n)
+			{
+				case 1: System.out.print("Enter your Name : ");
+						String signupName = sc.next();
+						System.out.print("Enter your Email : ");
+						String signupEmail = sc.next();
+						System.out.print("Enter your Phone Number : ");
+						long signupPh = sc.nextLong();
+						System.out.print("Enter your Password : ");
+						int signupPass = sc.nextInt();
+						user = new Qtalk(signupName, signupEmail, signupPh, signupPass);
+						System.out.println("\tSigned Up");
+						user.userDetails();
+						System.out.println("-----------------------");
+						break;
+				case 2: System.out.print("Enter your Phone Number : ");
+						loginPh = sc.nextLong();
+						System.out.print("Enter your Password : ");
+						loginPass = sc.nextInt();
+						user.login(loginPh, loginPass);
+						break;
+				case 3: System.out.print("Enter your Email : ");
+						loginEmail = sc.next();
+						System.out.print("Enter your Password : ");
+						loginPass = sc.nextInt();
+						user.login(loginEmail, loginPass);
+						break;
+				case 0:	System.out.println("-----------------------");
+						System.out.println("Thank you for using Qtalk.");
+						break;
+				default:	System.out.println("-----------------------");
+							System.out.println("Enter a valid option");
+							System.out.println("-----------------------");
+			}
+		}
+		while (n!=0);
+	}
+}

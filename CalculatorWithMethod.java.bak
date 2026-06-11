@@ -1,0 +1,32 @@
+class CalculatorWithMethod {
+	public static void addition() {
+		System.out.println("This is Addition Method");
+	}
+	
+	public static int addition(int a, int b) {
+		System.out.println("This is Addition Method with 2 parameters");
+		return a+b;
+	}
+	
+	public static float addition(float a, int b) {
+		System.out.println("This is Addition Method with 2 parameters which are different type from previous");
+		return a+b;
+	}
+	
+	public static void addition(int a, float b, double c) {
+		System.out.println("This is Addition Method with 3 parameters");
+		System.out.println(a+b+c);
+	}	
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+		System.out.println("--------------------------------------------------");		
+		addition();
+		System.out.println("--------------------------------------------------");
+		System.out.println(addition(10, 20));
+		System.out.println("--------------------------------------------------");
+		System.out.println(addition(10.0f, 20));
+		System.out.println("--------------------------------------------------");
+		addition(10, 15.0f, 25.0f)
+		System.out.println("--------------------------------------------------");
+	}
+}

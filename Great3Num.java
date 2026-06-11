@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Great3Num 
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter num1 : ");
+		int a = sc.nextInt();
+		System.out.print("Enter num2 : ");
+		int b = sc.nextInt();
+		System.out.print("Enter num3 : ");
+		int c = sc.nextInt();
+		if(a>b && a>c)
+		{
+			System.out.println(a+" is greater than "+b+" and "+c);
+		}
+		else if(b>c)
+		{
+			System.out.println(b+" is greater than "+a+" and "+c);
+		}
+		else
+		{
+			System.out.println(c+" is greater than "+a+" and "+b);
+		}
+	}
+}

@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class OrderBS
+{
+	static Scanner sc = new Scanner(System.in);
+	
+	public static int[] order(int a[])
+	{
+		int i = 0;
+		int j = a.length-1;
+		int k = 0;
+		while(k < j)
+		{
+			if(a[k] == 1)	k++;
+			else if(a[k] == 2)
+			{
+				int t = a[k];
+				a[k] = a[j];
+				a[j] = t;
+				j--;
+			}
+			else
+			{
+				int t = a[k];
+				a[k] = a[i];
+				a[i] = t;
+				i++;
+				k++;
+			}
+		}
+		return a;
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter array size : ");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter a array values : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println(Arrays.toString(order(a)));
+	}
+}

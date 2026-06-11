@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class CharCheck
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("\t\tCharacter Check\nEnter a character : ");
+		char a = sc.next().charAt(0);
+		switch (a)
+		{
+			case 'a','A':	System.out.println("Vowel A");
+								break;
+			case 'e','E':	System.out.println("Vowel E");
+								break;
+			case 'i','I':	System.out.println("Vowel I");
+								break;
+			case 'o','O':	System.out.println("Vowel O");
+								break;
+			case 'u','U':	System.out.println("Vowel U");
+								break;
+			default: System.out.println("Consonant / Not Vowel");
+		}
+	}
+}

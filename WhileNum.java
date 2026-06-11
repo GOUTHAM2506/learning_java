@@ -1,0 +1,94 @@
+import java.util.Scanner;
+class WhileNum
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a number : ");
+		int n = sc.nextInt();
+		int a = n;
+		int r = 0;
+		int count=0;
+		System.out.print("1. CountNum\n2. ReverseNum\n3. Fake ReverseNum (Just printing the last digit)\n4. Sum of digits\n5. Sum of even digits\n6. Spy Number\n7. Palindrome\nEnter your function : ");
+		int o = sc.nextInt();
+		switch (o)
+		{
+		case 1:	//CountNum
+				System.out.println("CountNum");
+				while (n>0)
+				{
+					n/=10;
+					count++;
+				}
+				System.out.println("The number of digits present in "+a+" are : "+count);
+				break;
+		case 2:	//ReverseNum
+				System.out.println("ReverseNum");
+				while (n>0)
+				{
+					int temp = n % 10;
+					r = r * 10 + temp;
+					n/=10;
+				}
+				System.out.println("Reverse num of "+a+" is : "+r);
+				break;
+		case 3:	//Fake ReverseNum (Just printing the last digit)
+				System.out.println("Fake ReverseNum");
+				while (n>0)
+				{
+					int temp = n % 10;
+					System.out.print(temp);
+					n/=10;
+				}
+				System.out.println("Reverse num of "+a+" is : "+r);
+				break;
+		case 4:	//Sum of digits
+				System.out.println("Sum of digits");
+				count = 0;
+				while (n>0)
+				{
+					int temp = n % 10;
+					count+=temp;
+					n/=10;
+				}
+				System.out.println("Sum of digits of "+a+" is : "+count);
+				break;
+		case 5:	//Sum of even digits
+				System.out.println("Sum of even digits");
+				count = 0;
+				while (n>0)
+				{
+					int temp = n % 10;
+					if(temp%2==0)	count+=temp;
+					n/=10;
+				}
+				System.out.println("Sum of even digits of "+a+" is : "+count);
+				break;
+		case 6:	//Spy Number
+				System.out.println("Spy number");
+				int count2 = 1;
+				while (n>0)
+				{
+					int temp = n % 10;
+					count+=temp;
+					count2*=temp;
+					n/=10;
+				}
+				if(count == count2)	System.out.println(a+" is a SpyNumber");
+				else	System.out.println(a+" is not a SpyNumber");
+				break;
+		case 7:	//Palindrome
+				System.out.println("ReverseNum");
+				while (n>0)
+				{
+					int temp = n % 10;
+					r = r * 10 + temp;
+					n/=10;
+				}
+				if(r==a)	System.out.println(a+" is a Plaindrome");
+				else	System.out.println(a+" is not a Plaindrome");
+				break;
+		default: System.out.println("Enter a valid function.");
+		}
+	}
+}

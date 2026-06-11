@@ -1,0 +1,19 @@
+class Swap 
+{
+	public static void main(String[] args) 
+	{
+		int a = 10;
+		int b = 20;
+		
+		System.out.println("A value is "+a);
+		System.out.println("B value is "+b);
+		
+		int t = a;
+		a = b;
+		b = t;
+		
+		System.out.println("After swap");
+		System.out.println("A value is "+a);
+		System.out.println("B value is "+b);
+	}
+}

@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class BinarySearch 
+{
+	static Scanner sc = new Scanner(System.in);
+	
+	public static int binaryS(int a[], int key)
+	{
+		Arrays.sort(a);
+		int i = 0;
+		int j = a.length-1;
+		while(i<=j)
+		{
+			int mid = i + (j - i) / 2;
+			if(a[mid] == key) return mid;
+			else if(a[mid] > key) j = mid - 1;
+			else if(a[mid] < key) i = mid + 1;
+		}
+		return -1;
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter array size : ");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter a array values : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.print("Enter the value to search : ");
+		int key = sc.nextInt();
+		int v = binaryS(a,key);
+		System.out.println( v == -1 ? key+" is not found in the array" : key+" is found at the position of "+v);
+	}
+}

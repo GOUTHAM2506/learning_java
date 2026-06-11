@@ -1,0 +1,58 @@
+//Diamond
+import java.util.Scanner;
+class Diamond
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws Exception
+	{
+		System.out.print("Enter a range : ");
+		int n = sc.nextInt();
+		for (int i=0;i<n;i++)
+		{
+			//Type 1(Done by myself)
+			for (int j=0;j<n;j++)
+			{
+				//if(true) System.out.print(i+""+j+" ");
+				if(i==n/2 || j==n/2 || (i+j>=n/2 && (i-j)*-1<=n/2 && i<=n/2) || (i-j<=n/2 && i+j<=(n+(n/2))-1 && i>=n/2))	System.out.print("* ");
+				else	System.out.print("  ");
+			}
+			System.out.print("   ");
+			//Type 2(Done by Sir)
+			for (int j=0;j<n;j++)
+			{
+				if(i<=j+n/2 && i>=j-n/2 && i+j>=n-1-n/2 && i+j<=n-1+n/2)	System.out.print("* ");
+				else	System.out.print("  ");
+			}
+			System.out.print("   ");
+			//Filled Diamond
+			for (int j=0;j<n;j++)
+			{
+				if(i>=j+n/2 || i+j>=n-1+n/2 || i<=j-n/2 || i+j<=n-1-n/2)	System.out.print("  ");
+				else	System.out.print("* ");
+			}
+			System.out.print("   ");
+			//Hollow Diamond
+			for (int j=0;j<n;j++)
+			{
+				if(i==j+n/2 || i==j-n/2 || i+j==n-1-n/2 || i+j==n-1+n/2)	System.out.print("* ");
+				else	System.out.print("  ");
+			}
+			System.out.print("   ");
+			//Opposite Diamond
+			for (int j=0;j<n;j++)
+			{
+				if(i>=j+n/2 || i+j>=n-1+n/2 || i<=j-n/2 || i+j<=n-1-n/2)	System.out.print("* ");
+				else	System.out.print("  ");
+			}
+			System.out.print("   ");
+			//Heart
+			for (int j=0;j<n;j++)
+			{
+				if((i<=j+n/2 && i+j<=n-1+n/2 && i>=1)|| (i==0 && j!=0 && j!=n-1 && j!=n/2) || (j==0 && i!=0 && i<=n/2) || (j==n-1 && i!=0 && i<=n/2))	System.out.print("* ");
+				else	System.out.print("  ");
+			}
+			System.out.print("   ");
+			System.out.println();
+		}
+	}
+}

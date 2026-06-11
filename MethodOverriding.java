@@ -1,0 +1,39 @@
+class Mother {
+	void singing() {
+		System.out.println("I like classical songs");
+	}
+	void dance() {
+		System.out.println("I like folk dance");
+	}
+}
+
+class Daughter extends Mother {
+	void singing() {
+		System.out.println("I like rap songs");
+	}
+	void dance() {
+		System.out.println("I like break dance");
+	}
+}
+
+class MethodOverriding 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("------------------------");
+		System.out.println("Hello World!");
+		System.out.println("------------------------");
+		Mother m1 = new Mother();
+		m1.singing();
+		m1.dance();
+		System.out.println("------------------------");
+		Daughter m2 = new Daughter();
+		m2.singing();
+		m2.dance();
+		System.out.println("------------------------");
+		Mother m3 = new Daughter();
+		m3.singing();
+		m3.dance();
+		System.out.println("------------------------");
+	}
+}

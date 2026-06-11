@@ -1,0 +1,30 @@
+//O(long n)
+import java.util.Scanner;
+import java.util.Arrays;
+class Duplicate2
+{
+	static Scanner sc = new Scanner(System.in);
+	
+	public static int dup(int a[])
+	{
+		Arrays.sort(a);
+		for(int i = 0; i < a.length-1; i++)
+		{
+			if(a[i] == a[i+1]) return a[i];
+		}
+		return -1;
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter array size : ");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter a array values : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.print("Duplicate number : "+dup(a));
+	}
+}

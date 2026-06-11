@@ -1,0 +1,95 @@
+import java.util.*;
+class Phone {
+	static Scanner sc = new Scanner(System.in);
+	Phone() {
+		Battery b1 = new Battery();
+		System.out.println("Phone has been manufactured");
+	}
+	
+	Phone(Camera c1) {
+		System.out.print("What type of camera do you want: \nOptions: 12, 24 : ");
+		int pixelInt1 = sc.nextInt();
+		if(pixelInt1 == 12) c1.mp12();
+		else c1.mp24();
+		Battery b1 = new Battery();
+		System.out.println("Phone has been manufactured");
+	}
+	
+	Phone(SimCard s1) {
+		System.out.print("What type of Sim do you want: \nOptions: Airtel, Jio : ");
+		String pixel1 = sc.next();
+		if(pixel1.charAt(0) == 'A') s1.airtel();
+		else s1.jio();
+		Battery b1 = new Battery();
+		System.out.println("Phone has been manufactured");
+	}
+	
+	Phone(Camera c2, SimCard s2) {
+		System.out.print("What type of camera do you want: \nOptions: 12, 24 : ");
+		int pixelInt2 = sc.nextInt();
+		if(pixelInt2 == 12) c2.mp12();
+		else c2.mp24();
+		System.out.print("What type of Sim do you want: \nOptions: Airtel, Jio : ");
+		String pixel2 = sc.next();
+		if(pixel2.charAt(0) == 'A') s2.airtel();
+		else s2.jio();
+		Battery b1 = new Battery();
+		System.out.println("Phone has been manufactured");
+	}
+}
+
+class Battery {
+	Battery() {
+		System.out.println("Battery has been added.");
+	}
+}
+
+class Camera {
+	void mp12() {
+		System.out.println("12 Mega Pixel Camera has been added.");
+	}
+	void mp24() {
+		System.out.println("24 Mega Pixel Camera has been added.");
+	}
+}
+
+class SimCard {
+	void airtel() {
+		System.out.println("Airtel Sim has been added");
+	}
+	void jio() {
+		System.out.println("Jio Sim has been added");
+	}
+}
+
+class HasA2 
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.println("We are making phone!");
+		System.out.println("---------------------------");
+		Camera c1 = new Camera();
+		SimCard s1 = new SimCard();
+		System.out.print("Do you want to add camera [y/n] : ");
+		char a = sc.next().charAt(0);
+		if(a == 'y') {
+			System.out.print("Do you want to add SimCard [y/n] : ");
+			a = sc.next().charAt(0);
+			if(a == 'y') {
+				Phone p1 = new Phone(c1, s1);
+			}
+			else {
+				Phone p2 = new Phone(c1);
+			}
+		}
+		else if(a == 'n') {
+			System.out.print("Do you want to add SimCard [y/n] : ");
+			a = sc.next().charAt(0);
+			if(a == 'y') {
+				Phone p3 = new Phone(s1);
+			}
+			Phone p4 = new Phone();
+		}
+	}
+}

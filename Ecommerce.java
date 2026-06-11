@@ -1,0 +1,121 @@
+import java.util.Scanner;
+class User {
+	
+	String userName;
+	String userId;
+	private long phNo;
+	
+	//Constructor
+	User(String userName, String userId, long phNo) {
+		this.userName = userName;
+		this.userId = userId;
+		this.phNo = phNo;
+	}
+	
+	//Setter for phNo
+	public void setphNo(long phNo) {
+		this.phNo = phNo;
+	}
+	
+	//Getter for phNo
+	public long getphNo() {
+		return phNo;
+	}
+	
+	void userDetails(){
+		System.out.println("\n\t==========User Details==========\n");
+		System.out.println("\tUser Name : "+userName);
+		System.out.println("\tUser Id : "+userId);
+	}
+	
+}
+
+class Product {
+	
+	String productName;
+	String pId;
+	double price;
+	
+	Product(String productName, String pId, double price) {
+		this.productName = productName;
+		this.pId = pId;
+		this.price = price;
+	}
+	
+	void productDetails(){
+		System.out.println("\n\t==========Product Details==========\n");
+		System.out.println("\tProduct Name : "+productName);
+		System.out.println("\tProduct Price : "+price);
+		System.out.println("\tProduct Id : "+pId);
+	}
+}
+
+interface Payment {
+	
+	void pay(double amount);
+	
+}
+
+class Cash implements Payment {
+	@Override
+		public void pay(double amount) {
+			System.out.println("\tPayment of Rupees "+amount+" done by Cash.");
+		}
+}
+
+class Upi implements Payment
+{
+	@Override
+		public void pay(double amount) {
+			System.out.println("\tPayment of Rupees "+amount+" done by UPI.");
+		}
+}
+
+class Card implements Payment
+{
+	@Override
+		public void pay(double amount) {
+			System.out.println("\tPayment of Rupees "+amount+" done by Card.");
+		}
+}
+
+class Ecommerce {
+	static Scanner sc = new Scanner(System.in);
+	//static method is used to execute first in the start of the program
+	static {
+		System.out.println("\n\tWelcome to My Ecommerce Website");
+	}
+	
+	public static void main(String[] args) {
+		User n1 = new User("Goutham","goutham@03",9952087822L);
+		n1.userDetails();
+		System.out.println("\tPhone Number : "+n1.getphNo());
+		Product p1 = new Product("Lenovo IdeaPad Gaming","lenovoidg@3184",75000);
+		Product p2 = new Product("Canon Canonet","canonidc@4597",12000);
+		Product p3 = new Product("Samsung S23 Ultra","samsungidm@3184",60000);
+		Product products[] = new Product[3];
+		products[0] = p1;
+		products[1] = p2;
+		products[2] = p3;
+		for(Product p : products) {
+			p.productDetails();
+		}
+		System.out.println("-----------------------------------------------------");
+		System.out.print("\t1.UPI\n\t2.Cash\n\t3.Card\n\tSelect your way of payment : ");
+		int opt = sc.nextInt();
+		Payment pay = null;
+		if(opt == 1) {
+			pay = new Upi();
+			pay.pay(75000);
+		}
+		else if(opt == 2) {
+			pay = new Cash();
+			pay.pay(12000);
+		}
+		else if(opt == 3) {
+			pay = new Card();
+			pay.pay(60000);
+		}
+		else System.out.println("Enter a valid option");
+	}
+}

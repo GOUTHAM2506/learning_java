@@ -1,0 +1,31 @@
+//O(n^2)
+import java.util.Scanner;
+class Duplicate
+{
+	static Scanner sc = new Scanner(System.in);
+	
+	public static int dup(int a[])
+	{
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] == a[j]) return a[i];
+			}
+		}
+		return -1;
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter array size : ");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter a array values : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.print("Duplicate number : "+dup(a));
+	}
+}

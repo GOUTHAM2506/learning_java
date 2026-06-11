@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Factors
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a number : ");
+		int n = sc.nextInt();
+		System.out.print("Factors of "+n+" is : ");
+		for (int i=1;i<=n;i++)
+		{
+			if (n%i==0) System.out.print(i+" ");
+		}
+	}
+}

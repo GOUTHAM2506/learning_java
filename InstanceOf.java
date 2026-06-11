@@ -1,0 +1,33 @@
+class A {
+}
+
+class B extends A {
+}
+
+class C extends B {
+}
+
+class D extends C {
+}
+
+class E extends A {
+}
+
+class F extends E {
+}
+
+class G extends F {
+}
+
+
+class InstanceOf {
+	public static void main(String[] args) 
+	{
+		A a1 = new D();
+		System.out.println(a1 instanceof A);
+		
+		B b1 = (B) a1;
+		System.out.println(b1 instanceof D);
+		
+	}
+}

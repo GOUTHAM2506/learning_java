@@ -1,0 +1,9 @@
+class OverFlow 
+{
+	public static void main(String[] args) 
+	{
+		short a = 128;
+		byte b = (byte)a; //It throws error because byte size is <=127 so it shows data overflow
+		System.out.println("a :"+a+"\nb :"+b+"\n"+Byte.MAX_VALUE);
+	}
+}

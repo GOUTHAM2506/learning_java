@@ -1,0 +1,22 @@
+import  java.util.Scanner;
+class Ifelse 
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter your age : ");
+		int a = sc.nextInt();
+		if(a>=1 && a<=12){
+			System.out.println("Child");
+		}
+		else if(a>=13 && a<=19){
+			System.out.println("Teenager");
+		}
+		else if(a>=20 && a<=59){
+			System.out.println("Adult");
+		}
+		else{
+			System.out.println("Senior Citizen");
+		}
+	}
+}

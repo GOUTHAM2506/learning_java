@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class NumType
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a number: ");
+		int n = sc.nextInt();
+		String ans = n==0 ? "Zero" : n>0 ? n%2==0 ? "Posititve Even" : "Positive Odd" : n%2==0 ? "Negative Even" : "Negative Odd";
+		System.out.println(ans);
+	}
+}

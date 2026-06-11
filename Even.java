@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class Even
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a number : ");
+		int a = sc.nextInt();
+		for(int i=1;i<=a;i++)
+		{
+			if (i%2 == 0)
+			{
+				System.out.println("The Even Numbers are : " + i);
+			}
+		}
+	}
+}

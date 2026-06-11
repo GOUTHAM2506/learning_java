@@ -1,0 +1,11 @@
+import java.util.Scanner;
+class Time1
+{
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter Time in Seconds : ");
+		int s = sc.nextInt();
+		System.out.println("Total Time taken in Minutes : "+(s/60)+"\nRemaining seconds : "+(s%60));
+	}
+}

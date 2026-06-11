@@ -1,0 +1,36 @@
+class Car {
+	Car() {
+		Engine e1 = new Engine();
+		System.out.println("Car has been manufactured.");
+	}
+	Car(MusicPlayer mp1) {
+		Engine e1 = new Engine();
+		mp1.song();
+		System.out.println("Car has been manufactured.");
+	}
+}
+
+class Engine {
+	Engine() {
+		System.out.println("Engine has been added");
+	}
+}
+	
+class MusicPlayer {
+	MusicPlayer() {
+		System.out.println("Music Player has been added");
+	}
+	void song(){
+		System.out.println("Annal music is playing");
+	}
+}
+	
+class HasARelationship {
+
+	public static void main(String[] args) {
+		Car c1 = new Car();
+		System.out.println("---------------------------");
+		MusicPlayer mp1 = new MusicPlayer();
+		Car c2 = new Car(mp1);
+	}
+}

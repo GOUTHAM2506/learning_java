@@ -1,0 +1,22 @@
+
+@FunctionalInterface
+interface A {
+	void m1();
+
+	int x = 10;
+	int y = 20;
+
+	static void m3() {
+		System.out.println("I am static method of interface A, m3");
+	}
+
+	static void m4() {
+		System.out.println("I am static method of interface A, m4");
+	}
+}
+
+class FunctionalInterface {
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+}

@@ -1,0 +1,31 @@
+import java.util.*;
+class CountElements 
+{
+	
+	public static int countEle1(int n){
+		int count = 0;
+		while(n>0){
+			n /= 10;
+			count++;
+		}
+		return count;
+	}
+	
+	public static int countEle2(int n){
+		return Math.log10(n)+1;
+	}
+	
+	public static void main(String[] args) 
+	{
+		int a[] = {1313,23,456,78,90};
+		int b[] = {1313,23,456,78,90};
+		for(int i=0; i<a.length; i++){
+			a[i] = countEle1(a[i]);
+		}
+		for(int i=0; i<a.length; i++){
+			b[i] = countEle2(b[i]);
+		}
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
+	}
+}

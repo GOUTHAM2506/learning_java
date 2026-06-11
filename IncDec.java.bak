@@ -1,0 +1,36 @@
+class IncDec 
+{
+	public static void main(String[] args) 
+	{
+		int a = 15;
+		int b = ++a + a++ + ++a;
+		System.out.println(a +" and "+ b);
+		int x = 5;
+		int y =x++ + ++x + x + ++x;
+		System.out.println(x +" and "+ y);
+		int p = 20;
+		int q = p++ + p++ + ++p + p;
+		System.out.println(p +" and "+ q);
+		int m = 7;
+		int n = ++m + m + m++ + ++m + m++;
+		System.out.println(m +" and "+ n);
+		int i = 15;
+		int j = i++ + ++i + (i++ + i) + ++i;
+		System.out.println(i +" and "+ j);
+		a = 12;
+		b = ++a + ++a + a++ + a++ + ++a;
+		System.out.println(a +" and "+ b);
+		x = 4;
+		y = x + ++x + x++ + x + ++x;
+		System.out.println(x +" and "+ y);
+		p = 9;
+		q = ++p + p++ + ++p + (p + p++);
+		System.out.println(p +" and "+ q);
+		int k = 3;
+		int r = k++ + ++k + ++k + k++ + k;
+		System.out.println(k +" and "+ r);
+		a = 8;
+		b = (a++ + a)+(++a + a++) + (++a);
+		System.out.println(a +" and "+ b);
+	}
+}

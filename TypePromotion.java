@@ -1,0 +1,31 @@
+class A {
+	void m1(float a, float b) {
+		System.out.println("Hello");
+	}
+	
+	void m1(double a, double b) {
+		System.out.println("Hi");
+	}
+	
+	void m1(float a, float b, String name){
+		System.out.println("Hello "+ name);
+	}
+}
+
+class B {
+	void m2(float a, double b) {
+		System.out.println("Hello");
+	}
+}
+
+class TypePromotion 
+{
+	public static void main(String[] args) 
+	{
+		A ob1 = new A();
+		ob1.m1(10,20);
+		B ob2 = new B();
+		ob2.m2(20,30);
+		ob1.m1(10,20,"Goutham");
+	}
+}
