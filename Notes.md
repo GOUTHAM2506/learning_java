@@ -829,7 +829,6 @@ _Notes:_
 
 - Any Number Character ('0' to '9') - 48 = Integer Number (0 to 9)
 
-
 # Collection Framework
 
 ## Object Class
@@ -844,7 +843,9 @@ Object o3 = true;
 Object o4 = "Hello";
 Object o5 = new Student(1,"Tom", 45);
 ```
+
 Ex:
+
 ```java
 public class Demo{
     public static void main(String args[]){
@@ -866,3 +867,75 @@ s@1301(Random address)
 ```
 
 1. Write a program to print student details those who marks greater than 65.
+
+## Framework
+
+- Framework is an readymade architecture which consists of set of classes and interfaces.
+
+Ex:
+
+- For backend we have -> Hibernate, Spring, SpringBoot
+- For frontend we have -> Angular, view JS
+- For testing we have -> Cucumber, playwright
+
+### Why wdo we need collection Framework in Java?
+
+- To store multiple objects or group of objects together we can generally use arrays.
+- But arrays has some limitations.
+
+#### Limitations of Array :
+
+- The size of the array is fixed, we cannot reduce or increase dynamically during the execution of the program.
+- Array is a collection of homogeneous elements.
+- Array manipulation such as
+  1. Removing an element from an array.
+  2. Adding the element in between the array etc.
+
+  Requires complex logic to solve.
+
+Therefore, to avoid the limitations of the array we can store the group of objects or elements using different data structures such as:
+
+1. List
+2. Set
+3. Queue
+4. maps / dicitions
+
+## Def of Collection Framework
+
+- Collection Framework is set of classes and interfaces (hierachies), which provides mechanism to store group of objects (elements) together.
+
+- It also provides mechanism to perform actions such as :
+
+  (CRUD - operations)
+  1. Create and add an element
+  2. Access the elements
+  3. Remove / Delete the elements
+  4. Search Elements
+  5. Update Elements
+  6. Sort Elements
+
+## Difference between Array and Collection
+
+| Array                                                        | Collection                                                |
+| ------------------------------------------------------------ | --------------------------------------------------------- |
+| Fixed in Size                                                | Dynamic in Size                                           |
+| Will accept only Homogenous type of data                     | Will accept both Homogenous and Heterogenous type of data |
+| No pre-defined methods                                       | We have many pre-defined methods                          |
+| Array will accept both primitive and non-primitive datatypes | Collection will accept only non-primitive datatypes       |
+| Array does not support generic                               | Collection support generic                                |
+
+```mermaid
+graph TD;
+Iterable_extends --> Collection
+Collection --> List_extends
+Collection --> Queue_extends
+Collection --> Set_extends
+List_extends --> ArrayList_inherits
+List_extends --> LinkedList_inherits
+List_extends --> Vector_inherits
+
+Queue_extends --> Priority_Queue_inherits
+Queue_extends --> Dequeue_extends
+Dequeue_extends --> LinkedList_inherits
+
+```

@@ -6,16 +6,17 @@ public class Try {
         int j = s.length() - 1;
         while (i < j) {
             if (arr[i] == 1)
-            if (s.charAt(i) == s.charAt(j) && i!=j) {
-                arr[i] = 1;
-                arr[j] = 1;
-                i++;
-                j = s.length();
-            }
+                if (s.charAt(i) == s.charAt(j) && i != j) {
+                    arr[i] = 1;
+                    arr[j] = 1;
+                    i++;
+                    j = s.length();
+                }
             j--;
         }
-        for(int k=0; k < arr.length; k++){
-            if(arr[k] == 0) return k;
+        for (int k = 0; k < arr.length; k++) {
+            if (arr[k] == 0)
+                return k;
         }
         return -1;
     }
