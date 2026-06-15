@@ -939,3 +939,57 @@ Queue_extends --> Dequeue_extends
 Dequeue_extends --> LinkedList_inherits
 
 ```
+
+## Collection Classification
+
+We can classify co,lections into 2 categories:
+
+1. Non-generic collection
+2. Generic Collection
+
+### Non-Generic Collection
+
+- It is heterogeneous collection of elements.
+- Every element is coverted and stored as java.lang.ObjectClass type.
+
+### Generic Collection
+
+- It is a homogeneous collection of elements, (collection of same type of elements).
+
+#### Syntax to create Generic Colleciton :
+
+1. Syntax to create reference variable for Generic Collection:
+
+   Collection_Type < Non-primitive > variableName = new Collection_Type < NP >;
+
+   ArrayList< Integer > ls;
+
+2. Syntax to create Generic Colleciton Object :
+
+   new Colleciton_name < Datatype > ();
+
+   new ArrayList < Integer > ();
+
+ArrayList < Integer > ls = new ArrayList < Integer >();
+arraylist where we can store only integers
+
+From JDK 7 onwards..
+
+ArrayList < Integer > ls = new ArrayList <>();
+
+Ex:
+
+```java
+import java.util.ArrayList;
+public class Demo {
+    public static void main (String args[]) {
+        ArrayList<Integer> a1 = new ArrayList<Integer>();
+        a1.add(1);
+        a2.add(2);
+        a3.add(3);
+        a3.add(4);
+        a3.add(5);
+        System.out.println(a1s);
+    }
+}
+```
