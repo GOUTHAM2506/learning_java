@@ -985,11 +985,50 @@ public class Demo {
     public static void main (String args[]) {
         ArrayList<Integer> a1 = new ArrayList<Integer>();
         a1.add(1);
-        a2.add(2);
-        a3.add(3);
-        a3.add(4);
-        a3.add(5);
-        System.out.println(a1s);
+        a1.add(2);
+        a1.add(3);
+        a1.add(4);
+        a1.add(5);
+        System.out.println(a1);
+    }
+}
+```
+
+## for each loop :
+
+- For each loop is an advanced version of traditional for loop.
+- And it is also called as Enchanced for loop.
+
+Syntax:
+
+ClassName < NP > = new ClassName();
+for each loop -> arr/coll
+
+for(DataType var : arr/coll) {
+
+}
+
+Ex:
+
+```java
+import java.util.ArrayList;
+public class Demo {
+    public static void main (String args[]) {
+        ArrayList a1 = new ArrayList();
+        a1.add(1);
+        a1.add("Tom");
+        a1.add(true);
+        a1.add(4.5);
+        a1.add(6849727352);
+        a1.add(null);
+        //Traditional for loop
+        for(int i=0; i<a1.size(); i++){
+            System.out.println(a1.get(i));
+        }
+        System.out.println("----------------------");
+        for(Object o : a1) {
+            System.out.println(o);
+        }
     }
 }
 ```
