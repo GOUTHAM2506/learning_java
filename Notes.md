@@ -1026,9 +1026,33 @@ public class Demo {
             System.out.println(a1.get(i));
         }
         System.out.println("----------------------");
+        //For Each loop
         for(Object o : a1) {
             System.out.println(o);
         }
     }
 }
 ```
+
+## Iterator
+
+- `iterator()` is method which belongs to Iterable interface.
+- `iterator()` method creates an Iterator type oject and returns the reference.
+- `iterator()` method returns the reference in Iterator (interface) type.
+
+### java.util.Iterator:
+
+Iterator interface has 2 important methods to perform iteration.
+
+1. `hasNext()` : It checks whether there is an element to be accessed from the collection, if present it returns `true`, else it returns `false`.
+
+2. `next()` : It is used to access the element, and moves the cursor to the next element. The return type of `next()` is `Object`
+
+### `NoSuchElementException`:
+
+In the Iterator, when we try to access an element using next() method and if there is no element present, we get `NoSuchElementException`
+
+#### Disadvantages of Iterator:
+
+1. We can iterate only once.
+2. We cannot access the elements in reverse order.
