@@ -1056,3 +1056,56 @@ In the Iterator, when we try to access an element using next() method and if the
 
 1. We can iterate only once.
 2. We cannot access the elements in reverse order.
+
+# Map
+
+- Map is a data structure which is used to store the data in the form of key and value.
+
+- Key cannot be duplicated but Value can be duplicated.
+
+- The combination of Key and Value pack is called as Entry.
+
+- One Key can be `NULL`, n number of Value can be `NULL`.
+
+## Implementation Classes
+
+- Implementation Classes are
+  1. HashMap
+  2. Linked HashMap
+  3. Tree Map
+  4. HashTable
+
+1. HashMap
+
+- HashMap is a implementation class of HashSet
+
+- Initial Capacity is 16, Incremental Capacity is current_capacity \* 2.
+
+- Load Factor is 0.75 or 75%.
+
+- It will follow HashTable data stucture.
+
+- Insertion order is not same.
+
+Ex:
+
+```java
+HashMap hm = new HashMap();
+hm.put(1,"A");
+hm.put(true,123.3);
+hm.put(43.2, "tom");
+hm.put('A',false);
+hm.put(null, false);
+
+System.out.println(hm);
+System.out.println(hm.containsKey('A'));        //true
+System.out.println(hm.containsValue(false));    //true
+System.out.println(hm.keySet());                //[every key]
+System.out.println(hm.values());                //[every value]
+
+hm.remove(null);
+System.out.println(hm);                         //null value will be given
+System.out.println(hm.get(1));                  //A
+System.out.println(hm.get(2));                  //null
+System.out.println(hm.size());                  //4
+```
